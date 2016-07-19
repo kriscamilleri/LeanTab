@@ -1,4 +1,4 @@
-    /**
+﻿    /**
  * Created by kcamilleri on 01/07/2016.
  */
 $(document).ready(
@@ -8,8 +8,13 @@ $(document).ready(
     setWeather(),
     getBackground(),
     setInterval(setCurrentTime, 60000),
-    getDailyQuote()
-    );
+    getDailyQuote(),
+	$('addToLinkList').on('click', addToLinkList()),
+	$('addToLinkList').on('click', resetLinkList())
+	
+);
+
+
 
 var data = [
     {
