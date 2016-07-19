@@ -1,0 +1,276 @@
+div{
+    font-family: 'Source Sans Pro', serif;
+    color: white;
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+    height: 100%;
+}
+
+.wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.aside-1 {
+    /*
+    background: gold;
+    */
+    height:5%;
+    width:10%;
+}
+
+.aside-2 {
+    /*
+    background: hotpink;
+    */
+    height:5%;
+    width:10%;
+}
+
+.central-list {
+    min-height: 37%;
+    /*
+    background: lightgreen;
+    */
+
+}
+
+.header {
+    min-height: 50px;
+    height: 5%;
+    /*
+    background: tomato;
+    */
+
+}
+
+.item-horizontal-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item-horizontal-noflow-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item-vertical-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.item {
+    border-radius: 0.2em;
+    background: #2a2a2a;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    color: white;
+    text-align: left;
+    line-height: 150%;
+    word-wrap: break-word;
+    overflow: hidden;
+    box-shadow:  0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    text-shadow:  1px 1px 4px rgba(0,0,0,0.6);
+
+    text-decoration:none;
+
+}
+
+/*.mini-item {
+    border-radius: 0.2em;
+    padding: 2px;
+    margin: 2px;
+    color: white;
+    text-align: center;
+    z-index: 100;
+}*/
+
+.weather-icon{
+    font-size: 1.25em;
+    border-bottom: white;
+}
+
+.weather-temp{
+    font-size: 3em;
+}
+
+.weather-text{
+    font-size: 1em;
+}
+
+.main {
+    text-align: center;
+    border-radius: 0.2em;
+    /*
+    background: #2a2a2a;
+    */
+    min-height: 100px;
+    height:5%;
+    width:80%;
+    min-width: 300px;
+    overflow: hidden;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    align-self: flex-end;
+
+}
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 auto;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3 0px;
+    }
+
+    .header {
+        order: 4;
+    }
+
+    .aside-1 {
+        order: 0;
+    }
+
+    .main {
+        order: 1;
+    }
+
+    .aside-2 {
+        order: 2;
+    }
+
+    .central-list {
+        order: 3;
+    }
+}
+
+.time{
+    font-size: 3em;
+    padding-left: 10px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.date{
+    font-size: 1em;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather{
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.header{
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#search > .ui-front{
+    position: inherit;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100px;
+    text-align: left;
+}
+
+.search{
+    padding-top: 50px;
+    color: #333333;
+}
+
+#searchBox, .eac-item{
+    color: #333333;
+    text-align: left;
+    border-radius: 0.2em;
+}
+/*
+FROM http://product.hubspot.com/blog/how-to-build-a-sleek-animated-input-form-with-css
+*/
+.group 	{
+    position:relative;
+    margin-bottom:45px;
+}
+
+input {
+    box-shadow:  0 5px 8px 0 rgba(0,0,0,0.1);
+    opacity: 0.1;
+    font-size:18px;
+    padding:10px 10px 10px 10px;
+    outline:none;
+    border:none;
+    display:block;
+    width:450px;
+
+    -webkit-transition: opacity 0.25s ease-in;
+    -moz-transition: opacity 0.25s ease-in;
+    -ms-transition: opacity 0.25s ease-in;
+    -o-transition: opacity 0.25s ease-in;
+    transition: opacity 0.25s ease-in;
+}
+
+
+.is-filled-input{
+    box-shadow:  0 5px 8px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.19);
+    opacity: 1;
+    font-size:18px;
+    padding:10px 10px 10px 10px;
+    outline:none;
+    border:none;
+    display:block;
+    width:450px;
+
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
+}
+
+label {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.is-filled {
+    left:-80px;
+    font-size:18px;
+    color:#FFFFFF;
+}
+
+.pixelated {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: pixelated;
+}

@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="hardcorenewtabparty.css">
+<link rel="stylesheet" href="easy-autocomplete.css"> </link>
+<link rel="stylesheet" href="/NewTab/Icons/weather-icons.css"> </link>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"></html>
+
+<div class="wrapper">
+    <header  class="header">
+
+    </header>
+
+    <div class="central-list">
+        <div class="item-vertical-wrapper">
+
+            <div class="item-horizontal-noflow-wrapper search">
+                <form id="searchForm" method="get" action="http://www.google.com/search">
+                    <div class="group" id="search">
+                        <input id="searchBox" type="text" name="q" size="31" maxlength="255" value=""/>
+                        <label id="searchLabel" class="label-text">Search</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="central-list">
+        <div id="listContainer" class="item-horizontal-wrapper">
+            <div class="item default-item" onclick="addToLinkList()"> + </div>
+            <div class="item default-item" onclick="resetLinkList()"> - </div>
+        </div>
+    </div>
+
+    <div id="quote" class="main">
+
+
+    </div>
+    <div class="aside aside-1">
+        <div class="item-horizontal-wrapper">
+            <div class="item-horizontal-wrapper">
+                <div id="weatherTemp" class="mini-item weather-temp weather"></div>
+            </div>
+
+            <div class="item-vertical-wrapper">
+                <div id="weatherIcon" class="mini-item weather-icon weather"></div>
+                <div id="weatherText" class="mini-item weather-text weather"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="aside aside-2">
+        <div class="item-horizontal-wrapper">
+            <div class="item-vertical-wrapper">
+
+            <div id="date" class="date"></div>
+            </div>
+            <div id="time" class="time"></div>
+
+
+
+        </div></div>
+</div>
+
+</body>
+</html>
+<script src="jquery-3.0.0.js"></script>
+<script src="color-thief.js"></script>
+<script src="lz-string.js"></script>
+<script src="jquery.easy-autocomplete.js"></script>
+<script src="jquery.simpleWeather.min.js"></script>
+<script src="jquery.gradientify.js"></script>
+<script src="jquery.fittext.js"></script>
+
+<script src="hardcorenewtabparty.js"></script>
