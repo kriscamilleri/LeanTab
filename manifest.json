@@ -1,0 +1,54 @@
+{
+  "name": "LeanTab",
+  "description": "Overrides the new tab page",
+  "version": "0.1",
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "hardcorenewtabparty.html"
+  },
+    "manifest_version": 2,
+	"web_accessible_resources": [
+		"font/weathericons-regular-webfont.eot",
+		"font/weathericons-regular-webfont.svg",
+		"font/weathericons-regular-webfont.ttf",
+		"font/weathericons-regular-webfont.woff",
+		"font/weathericons-regular-webfont.woff2"
+	],
+	  "permissions": [
+		"http://quotesondesign.com/wp-json/*",
+		"http://www.bing.com/*",
+		"http://toolbarqueries.google.com/complete/*"		
+  ],
+   "content_scripts": [
+		{
+		  "matches": ["https://fonts.googleapis.com/css?family=Source+Sans+Pro"],
+		  "js" : ["jquery-3.0.0.js"],
+		  "js" : ["color-thief.js"],
+		  "js" : ["lz-string.js.js"],
+		  "js" : ["jquery.easy-autocomplete.js"],
+		  "js" : ["jquery.simpleWeather.min.js"],
+		  "js" : ["jquery.fittext.js.js"],
+		  "js" : ["hardcorenewtabparty.js"],
+		  "css": ["sourcesanspro.css"],
+		  "css": ["hardcorenewtabparty.css"],
+		  "css": ["easy-autocomplete.css"],
+		  "css": ["weather-icons.css"]		  
+		}
+	],
+	"web_accessible_resources": [
+		"font/weathericons-regular-webfont.eot",
+		"font/weathericons-regular-webfont.svg",
+		"font/weathericons-regular-webfont.ttf",
+		"font/weathericons-regular-webfont.woff",
+		"font/weathericons-regular-webfont.woff2"
+	],
+	  "permissions": [
+		"http://quotesondesign.com/wp-json/*",
+		"http://www.bing.com/*",
+		"https://query.yahooapis.com/v1/public/*",
+		"https://plus.google.com/_/*",
+		"http://toolbarqueries.google.com/complete/*"		
+
+  ],
+    "content_security_policy": "script-src 'self' https://query.yahooapis.com/v1/public/; object-src 'self' 'unsafe-inline'"
+}

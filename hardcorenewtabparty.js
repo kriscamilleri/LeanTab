@@ -1,4 +1,4 @@
-    /**
+﻿    /**
  * Created by kcamilleri on 01/07/2016.
  */
 $(document).ready(
@@ -9,7 +9,15 @@ $(document).ready(
     getBackground(),
     setInterval(setCurrentTime, 60000),
     getDailyQuote()
-    );
+	
+	
+);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("resetLinkList").addEventListener("click", resetLinkList);
+  document.getElementById("addToLinkList").addEventListener("click", addToLinkList);
+});
 
 var data = [
     {
@@ -164,6 +172,7 @@ function generateLinkList(dataList) {
 }
 
 function resetLinkList(){
+	//alert("B!");
     window.localStorage.clear();
 
     localStorage.setItem('color-Times Of Malta',  "rgb(39, 37, 41)");
@@ -254,7 +263,7 @@ function setPrimaryColor(url, name){
     img.onload = function () {
         var colorThief = new ColorThief();
         var color = colorThief.getColor(img);
-        alert(color);
+        //alert(color);
         localStorage.setItem('color-' + name,  'rgb('+color+')');
     };
     img.src = url;
